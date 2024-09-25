@@ -148,9 +148,9 @@
             <h3>Login to your Account</h3><br>
             <form action="{{ route('register') }}" method="POST">
                 @csrf
-                <input type="text" name="name" class="form-control" placeholder="Your username or email" required>
-                {{-- <input type="email" name="email" class="form-control" placeholder="Email" required> --}}
-                <input type="password" name="password" class="form-control" placeholder="Your password" required>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Your username" required>
+                <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                <input type="password" id="password" name="password" class="form-control" placeholder="Your password" required>
                 <button type="submit" class="btn btn-login">Log In</button>
             </form>
             {{-- <div class="divider">

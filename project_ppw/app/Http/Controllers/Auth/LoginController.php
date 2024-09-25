@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
+
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -36,4 +39,14 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    public function logout(Request $request)
+{
+    Auth::logout();  // Logout user dari session
+    $request->session()->invalidate(); // Invalidasi semua session
+    $request->session()->regenerateToken(); // Regenerasi CSRF token
+
+    return redirect('/login'); // Redirect ke halaman login
+}
+
 }
