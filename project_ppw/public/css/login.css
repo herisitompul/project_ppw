@@ -76,7 +76,7 @@ body {
     border-radius: 5px;
     width: 100%;
 }
-.btn-google {
+/* .btn-google {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,10 +87,10 @@ body {
     border-radius: 5px;
     width: 100%;
     margin-top: 20px;
-}
-.btn-google img {
+} */
+/* .btn-google img {
     margin-right: 10px;
-}
+} */
 .login-footer {
     text-align: center;
     margin-top: 20px;
@@ -115,3 +115,12 @@ body {
     color: #888;
     font-size: 14px;
 }
+
+@media screen and (max-width: 476px){
+    .login-container{
+        width: 100%;
+        position: absolute;
+        right: 5px;
+    }
+}
+    
